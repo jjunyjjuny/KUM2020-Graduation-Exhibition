@@ -15,19 +15,28 @@
         <header class="container">
             <div id="header-title" class="left">
                 <img src="./img/title.png" alt="title">
+                <div>
+                    <p class="nexon-medium">(&ensp;&ensp;&ensp;&ensp;) 우리 집</p>
+                    <div id="btn-toggle" class="show-mobile">
+                        <img id="btn_open" src="" alt="open" onclick="toggle(this.id)">
+                        <img id="btn_close" src="" alt="close" onclick="toggle(this.id)" style="display: none;">
+                    </div>
+                </div>
             </div>
             <div id="header-sub">
                 <div id="header-info">
-                    <p class="nexon-medium">국민대학교 시각디자인학과 기획전 2020</p>
-                    <p class="noto-demi">Major in Visual Communication Design,<br>Kookmin University Exhibition 2020</p>
+                    <p class="nexon-medium show-pc">국민대학교 시각디자인학과 기획전 2020</p>
+                    <p class="noto-demi show-pc">Major in Visual Communication Design,<br>Kookmin University Exhibition
+                        2020</p>
+                    <p class="nexon-medium show-mobile">KMUVCD Exhibition 2020<br>국민대학교 시각디자인학과 기획전 2020</p>
                 </div>
-                <div>
+                <div class="show-pc">
                     <img src="./img/logo.png" alt="logo">
                 </div>
             </div>
         </header>
         <div id="main" class="container">
-            <nav class="left">
+            <nav id="toggle" class="left nexon-regular">
                 <button id="0" onclick="btn(this.id)" autofocus>인사말</button>
                 <button id="1" onclick="btn(this.id)">전시 기획</button>
                 <button id="2" onclick="btn(this.id)">전시 안내</button>
@@ -153,12 +162,27 @@
                 </article>
             </section>
         </div>
-        <footer class="container">
+
+        <footer class="container show-pc-flex">
             <div class="left"></div>
             <div class="center">
                 <div>kmuvcd2020@gmail.com</div>
                 <div>Instagram | @blank_ourhouse</div>
                 <div>Facebook | Blank Our House</div>
+            </div>
+        </footer>
+
+        <footer class="show-mobile-flex">
+            <div>
+                <a href="https://forms.gle/ooE1sF2BSQujE7A96" target="_blank"><img src="./img/link.png" alt=""></a>
+            </div>
+            <div class="icon">
+                <a href="#" target="_blank">
+                    <img src="./img/facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.instagram.com/blank_ourhouse/?hl=ko" target="_blank">
+                    <img src="./img/insta.png" alt="instagram">
+                </a>
             </div>
         </footer>
         <div id="drag">

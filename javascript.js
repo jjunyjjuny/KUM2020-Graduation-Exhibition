@@ -1,3 +1,7 @@
+const btn_open = document.getElementById('btn_open')
+const btn_close = document.getElementById('btn_close')
+const nav = document.getElementById('toggle')
+
 function set() {
     const sections = document.getElementsByClassName('sections')
     sections[0].style.display = 'flex'
@@ -11,8 +15,30 @@ function btn(id) {
     }
     sections[id].style.display = 'flex'
 
-}
+    const mq = window.matchMedia("screen and (max-width: 480px)")
+    if (mq.matches){
+        btn_close.style.display = 'none'
+        btn_open.style.display = 'block'
+        nav.classList.remove('appear')
 
+    }
+
+}
+function toggle(id) {
+
+    if(id === 'btn_open'){
+        btn_open.style.display = 'none'
+        btn_close.style.display = 'block'
+        nav.classList.remove('hidden')
+        nav.classList.add('appear')
+    } else if(id==='btn_close') {
+        btn_close.style.display = 'none'
+        btn_open.style.display = 'block'
+        nav.classList.remove('appear')
+
+    }
+    
+}
 
 function dragElement(elmnt) {
     var pos1 = 0,
@@ -55,7 +81,7 @@ function dragElement(elmnt) {
 const drag = document.getElementById("drag")
 dragElement(drag);
 
-drag.style.bottom = document.getElementById('footer').offsetHeight +'px'
+// drag.style.bottom = document.getElementById('footer').offsetHeight +'px'
 
 
 
