@@ -10,11 +10,13 @@ set()
 function btn(id) {
     const btn = document.getElementById(id)
     const sections = document.getElementsByClassName('sections')
+    const section_contents = document.getElementsByClassName('section-contents')
+    
     for (let i = 0; i < sections.length; i++) {
         sections[i].style.display = 'none'
     }
     sections[id].style.display = 'flex'
-    sections[id].scrollTop = 0;
+    section_contents[id].scroll(0,0)
 
     const mq = window.matchMedia("screen and (max-width: 480px)")
     if (mq.matches){
