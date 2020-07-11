@@ -16,7 +16,8 @@ function btn(id) {
         sections[i].style.display = 'none'
     }
     sections[id].style.display = 'flex'
-    section_contents[id].scroll(0,0)
+    document.getElementById('main').scroll(0,0)
+    section_contents[id].scroll(0, 0)
 
     const mq = window.matchMedia("screen and (max-width: 480px)")
     if (mq.matches){
