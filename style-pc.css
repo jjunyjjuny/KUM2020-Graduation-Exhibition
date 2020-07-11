@@ -68,6 +68,10 @@ table {
 * {
     box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+}
 html, body {
     width: 100%;
     height: 100%;

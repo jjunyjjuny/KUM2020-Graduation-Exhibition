@@ -3,11 +3,6 @@
         overflow: auto;
     }
 
-    *::-webkit-scrollbar {
-        display: none;
-        /* Chrome, Safari, Opera*/
-    }
-
     .wrap .container {
         padding: 0px;
     }
